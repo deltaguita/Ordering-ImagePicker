@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #################
 ## Eclipse
 #################
@@ -173,3 +174,7 @@ out/
 build-log.xml
 build.log
 build.xml
+=======
+# Google App Engine generated folder
+appengine-generated/
+>>>>>>> d0dd0cc237c4ec98a61f84269a7c4b62e38f7c62
