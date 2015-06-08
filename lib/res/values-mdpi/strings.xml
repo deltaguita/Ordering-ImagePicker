@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="project_name">相機膠卷</string>
+    <string name="btn_ok">確定</string>
+    <string name="btn_pick">單選照片</string>
+    <string name="btn_pick_mul">復選照片</string>
+
+</resources>

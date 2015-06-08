@@ -1,0 +1,28 @@
+<com.deltaguita.gallery.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_margin="2dp"
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:maxHeight="70dp"
+        android:maxWidth="70dp"
+        android:scaleType="centerCrop"
+        android:background="#3d3d3d" />
+
+    <TextView
+
+        android:id="@+id/text_sort"
+        android:layout_alignParentRight="true"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:textColor="#000"
+        android:text="0"
+
+        android:gravity="center"
+        android:background="#f3d420" />
+
+
+</com.deltaguita.gallery.SquareRelativeLayout>

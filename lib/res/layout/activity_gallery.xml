@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#000"
+
+        android:layout_height="53dp">
+
+        <TextView
+            android:paddingTop="2dp"
+            android:id="@+id/btn_exit"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:text="@string/album"
+            android:paddingLeft="6dp"
+            android:drawablePadding="4dp"
+            android:drawableLeft="@drawable/ic_keyboard_return_white_18dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/btnGalleryOk"
+            android:background="@drawable/style_rounded_000000_boder_f3d420"
+            android:gravity="center"
+
+            android:text="@string/sure"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:layout_width="48dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <GridView
+            android:id="@+id/gridGallery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="#fff9f2"
+            android:numColumns="3"
+            android:padding="0dp"
+            tools:listitem="@layout/adapter_picture"></GridView>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/imgNoMedia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/no_media" />
+    </FrameLayout>
+
+
+</LinearLayout>
