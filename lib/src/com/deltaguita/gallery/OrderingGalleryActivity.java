@@ -62,17 +62,12 @@ public class OrderingGalleryActivity extends Activity {
 
     private void initImageLoader() {
 
-        SchemeRegistry schemeRegistry = new SchemeRegistry();
-        schemeRegistry.register(new Scheme("http", PlainSocketFactory.getSocketFactory(), 80));
-        schemeRegistry.register(new Scheme("https", SSLSocketFactory.getSocketFactory(), 443));
 
 //        ClientConnectionManager manager = new ThreadSafeClientConnManager(params, schemeRegistry);
 
         DisplayImageOptions imageOptions = new DisplayImageOptions.Builder()
                 .cacheInMemory(true).cacheOnDisk(true)
                 .resetViewBeforeLoading(true).considerExifParams(false)
-//                .showImageForEmptyUri(R.drawable.image_errors)
-//                .showImageOnLoading(R.drawable.image_loading)
                 .bitmapConfig(Bitmap.Config.RGB_565).build();
 
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
@@ -118,7 +113,6 @@ public class OrderingGalleryActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
-        //先把已選擇的存下來
         temp = adapter.getSelected();
 
     }
@@ -162,8 +156,9 @@ public class OrderingGalleryActivity extends Activity {
 
             final ArrayList<PhotoItem> selected = adapter.getSelected();
             if (selected.size() == 0) {
-                new AlertDialog.Builder(OrderingGalleryActivity.this).setTitle("相片膠卷").setMessage("您還未選擇照片")
-                        .setPositiveButton("確定", new DialogInterface.OnClickListener() {
+                new AlertDialog.Builder(OrderingGalleryActivity.this).setTitle("Ordering-ImagePicker")
+                        .setMessage("You have not select photo")
+                        .setPositiveButton("sure", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
 
@@ -172,7 +167,7 @@ public class OrderingGalleryActivity extends Activity {
                                 finish();
                             }
                         })
-                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
@@ -240,12 +235,6 @@ public class OrderingGalleryActivity extends Activity {
         // show newest photo at beginning of the list
         Collections.reverse(galleryList);
         return galleryList;
-    }
-
-    boolean dupicate() {
-        List<String> devices = new ArrayList<String>();
-        devices.add("htc");
-        return devices.contains(android.os.Build.BRAND.toLowerCase());
     }
 
     @Override
