@@ -4,8 +4,6 @@ An ordering multi-select gallery
 
 ## Usage
 
-
-
 code:
 
     Intent intent = new Intent(this, OrderingGalleryActivity.class);
