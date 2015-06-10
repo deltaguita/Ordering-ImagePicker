@@ -1,7 +1,7 @@
 # Ordering-ImagePicker
 An ordering multi-select gallery
 
-![Screenshot](https://raw.githubusercontent.com/deltaguita/Ordering-ImagePicker/master/raw/Screenshot_2015-06-08-14-58-27.png)
+![Screenshot](https://raw.githubusercontent.com/deltaguita/Ordering-ImagePicker/master/raw/screen.png)
 
 
 ## Usage
